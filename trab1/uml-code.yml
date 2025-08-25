@@ -1,0 +1,36 @@
+classDiagram
+    direction LR
+
+    class IObserver {
+        <<Interface>>
+        +update(String productName, int amount)
+    }
+
+    class ISubject {
+        <<Interface>>
+        +registerObserver(IObserver o)
+        +removeObserver(IObserver o)
+        +notifyObservers()
+    }
+    
+    class Product {
+        -List~IObserver~ observers
+        -String name
+        -int amount
+        +setAmount(int amount)
+    }
+
+    class CustomerNotifier {
+        -String name
+        +update(String productName, int amount)
+    }
+
+    class StockManagerNotifier {
+        -int STOCK_LIMIT
+        +update(String productName, int amount)
+    }
+
+    Product --|> ISubject
+    CustomerNotifier --|> IObserver
+    StockManagerNotifier --|> IObserver
+    Product "1" o--> "*" IObserver : maintains
