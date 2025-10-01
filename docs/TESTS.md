@@ -85,3 +85,19 @@ fail(msg): Força uma parada.
 
 O JUnit tem uma função de teste de cobertura que analisa se toda a sua aplicação 
 está tendo suas funcionalidade "cobertas" pelos testes implementados.
+----
+Faltei a ultima aula (25/09/25)
+----
+### Testes estruturais
+- Cobertura de linha
+- Cobertura de bloco
+- Cobertura de decisão
+- Cobertura de condição
+- Cobertura de caminho
+
+#### Cobertura de linha
+Formula= n de linhas cobertas/ n de linhas total
+É uma métrica, mas tem um trick. Posso economizar linhas
+com um ```if (condicao) return 0;```. Mas isso é olhando a tabulação do código.
+Para contornar veja o FLUXO de execução usando um grafo.
+  
