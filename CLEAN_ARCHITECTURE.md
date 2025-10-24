@@ -33,8 +33,9 @@ As politicas de alto nivel nao devem depender das de baixo nivel.
 Usar inversao de dependencias (elementos da camada superior (ex: superclasses) nao dependem das camadas inferiores (ex: subsclasses).
 
 DDD - Modelagem do domínio antes de tudo.
-Organizacao de cima p baixo em relacao as dependencias.
+Organizacao de cima p baixo em relacao as dependencias.  
 
+---
 Com base no diagrama fornecido e nos conceitos da Arquitetura Limpa (Clean Architecture), aqui está uma proposta de um novo diagrama de pacotes, com ajustes nas classes e responsabilidades para aderir mais estritamente a essa abordagem.
 
 A principal premissa da Arquitetura Limpa é a Regra da Dependência: todo o código-fonte deve apontar para dentro, em direção às políticas de mais alto nível (o domínio).
